@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .sign-in {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+        }
+
+        .logo-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-box img {
+            width: 130px;
+            height: 130px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        form p {
+            color: rgb(169, 176, 176);
+        }
+
+        .inp-box {
+            padding-top: 15px;
+        }
+
+        .inp-box input {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            outline: none;
+            padding-left: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+
+        .footer .log {
+            padding-left: 10px;
+        }
+
+        .footer a {
+            padding-left: -20px;
+            font-size: 15px;
+            text-decoration: none;
+            color: rgb(225, 0, 255);
+        }
+
+        #btn {
+            width: 100%;
+            height: 40px;
+            background-color: aqua;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .account {
+            margin-top: 20px;
+        }
+
+        .account a {
+            /* margin-left: -5px; */
+            font-size: 15px;
+            color: rgb(80, 80, 255);
+        }
+
+        .sky-bg {
+            flex: 1;
+            min-width: 300px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("sky.jfif");
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .sky-bg img {
+            width: 80px;
+            height: 80px;
+            opacity: 0.5;
+        }
+
+        .sky-bg .para {
+            position: absolute;
+            padding-top: 10px;
+            font-size: 28px;
+            color: azure;
+            text-align: center;
+        }
+
+        @media (max-width: 868px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sky-bg {
+                order: -1;
+                height: 200px;
+            }
+
+            .sky-bg .para {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sign-in">
+            <div class="logo-box">
+                <img src="logo-small.png" alt="">
+            </div>
+
+            <form action="abc.php">
+                <h2>Sign In</h2>
+                <p>Enter your email and password to sign in!</p>
+
+                <div class="inp-box">
+                    <h5>Email*</h5>
+                    <input type="text" placeholder="mail@tappay.com">
+                </div>
+
+                <div class="inp-box">
+                    <h5>Password*</h5>
+                    <input type="password" placeholder="Enter Your Password">
+                </div>
+
+                <div class="footer">
+                    <input type="checkbox"><span class="log">Keep me logged in</span>
+                    <a href="#">Forget password?</a>
+
+                    <button id="btn">Sign In</button>
+
+                    <div class="account">
+                        <span>Not registered yet?</span>
+                        <a href="#">Create an Account</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="sky-bg">
+            <img src="logo-small.png" alt="" id="sky-img">
+            <p class="para">Where payments are just a Tap away!</p>
+        </div>
+    </div>
+</body>
+</html>
